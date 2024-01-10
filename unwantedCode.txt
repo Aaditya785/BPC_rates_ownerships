@@ -1,0 +1,12 @@
+      <div class="border p-1 rounded">
+        <label for="dateFrom">From:</label>
+        <input type="date" id="dateFrom" name="dateInput" />
+        <label for="dateTo">To:</label>
+        <input type="date" id="dateTo" name="dateInput" />
+      </div> 
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Edit 
+        <img alt="" src="../icons/pencil.png" />
+      </button> -->

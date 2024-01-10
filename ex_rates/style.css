@@ -1,3 +1,7 @@
 .heading{
 	text-shadow: 3px 2px 4px black;
 }
+
+.rateSelection{
+	width: fit-content;
+}
