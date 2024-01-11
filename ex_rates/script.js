@@ -12,86 +12,52 @@ $(document).ready(function() {
     $('[data-bs-toggl="tooltip"]').on('click', function() {
       $(this).tooltip('hide');
     });
+
+
+    $('input[type="checkbox"]').change(function () {
+      // Get the class related to the checkbox
+      var className = $(this).attr('class');
+      console.log(className);
+      // Toggle the visibility of elements with the same class
+      $('.' + className).toggle(this.checked);
+    });
+    
+
+
+    // Handle change event of the dropdown
+    var avgRate = document.querySelectorAll('#avgRate');
+var closeRate = document.querySelectorAll('#closeRate');
+var both = document.querySelectorAll('#closeRate, #avgRate');
+
+
+// filter for rateSelection
+$(".rateSelection").change(function () {
+  var selectedValue = $(this).val();
+
+  if (selectedValue === "1") {
+    closeRate.forEach(function(element) {
+      element.style.visibility = 'hidden';
+    });
+
+    avgRate.forEach(function(element) {
+      element.style.visibility = 'visible';
+    });
+  } else if (selectedValue === "2") {
+    avgRate.forEach(function(element) {
+      element.style.visibility = 'hidden';
+    });
+
+    closeRate.forEach(function(element) {
+      element.style.visibility = 'visible';
+    });
+  } else if (selectedValue === "3") {
+    both.forEach(function(element) {
+      element.style.visibility = 'visible';
+    });
+  }
+});
+
+// filter for dates
+
+
   });
-
-
-
-
-//   $(document).ready(function() {
-//     $('.rateSelection').change(function() {
-//         var selectedValue = $(this).val();
-//         showSelectedRate(selectedValue);
-//     });
-
-//     function showSelectedRate(rateType) {
-//         console.log("rate type : ", rateType);
-//         if (rateType == 1) {
-//             $("#avgRate").hide();
-//             $("#closeRate").show();
-
-//             // Show only the corresponding columns
-//             $('td[data-rate-type="1"]').show();
-//             $('td[data-rate-type="2"]').hide();
-//         } else if (rateType == 2) {
-//             $("#avgRate").show();
-//             $("#closeRate").hide();
-
-//             // Show only the corresponding columns
-//             $('td[data-rate-type="1"]').hide();
-//             $('td[data-rate-type="2"]').show();
-//         } else {
-//             $("#avgRate").show();
-//             $("#closeRate").show();
-
-//             // Show all columns
-//             $('td[data-rate-type]').show();
-//         }
-//     }
-// });
-
-
-
-//   $(document).ready(function() {
-//     $('.rateSelection').change(function() {
-//       var selectedValue = $(this).val();
-//       showSelectedRate(selectedValue);
-//     });
-
-//     function showSelectedRate(rateType) {
-//         console.log("rate type : ",rateType);
-//         if(rateType == 1){
-//             $("avgRate"]').hide(); // Hide all rate columns
-//             // Show the selected rate column
-//             $('th[id="rate"]:contains(' + rateType + ')').show();
-            
-//             // Show only the corresponding rows
-//             $('tbody tr').each(function() {
-//                 var currency = $(this).find('td:first').text().toLowerCase();
-//                 if (currency.includes(rateType)) {
-//                     $(this).show();
-//                 } else {
-//                     $(this).hide();
-//                 }
-//             });
-//         }
-//         else if(rateType == 2){
-//             $('th[id="closeRate"]').hide(); // Hide all rate columns
-//             // Show the selected rate column
-//             $('th[id="rate"]:contains(' + rateType + ')').show();
-            
-//             // Show only the corresponding rows
-//             $('tbody tr').each(function() {
-//                 var currency = $(this).find('td:first').text().toLowerCase();
-//                 if (currency.includes(rateType)) {
-//                     $(this).show();
-//                 } else {
-//                     $(this).hide();
-//                 }
-//             });
-//         }
-//         else{
-//             $('th[id="closeRate"]').show(); 
-//             $('th[id="avgRate"]').show(); 
-//         }
-//     }
-//   });

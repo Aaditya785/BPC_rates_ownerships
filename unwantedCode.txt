@@ -10,3 +10,384 @@
         Edit 
         <img alt="" src="../icons/pencil.png" />
       </button> -->
+
+
+
+      ## exchange rates
+      ex_rates.html 
+      <div
+      class="container d-flex justify-content-between align-items-center my-3"
+    >
+      <h6>Category <span class="badge bg-secondary">Actual</span></h6>
+
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Edit <img alt="" src="../icons/pencil.png" />
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Are You Sure To Make Changes..
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Ok
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container border d-flex justify-content-center align-items-center flex-wrap gap-5 p-3"
+    >
+      <table class="table table-hover w-25">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center" colspan="3">DEC_2016</th>
+          </tr>
+          <tr>
+            <th scope="col">Currency</th>
+            <th scope="col">Avg. Rate</th>
+            <th scope="col">Closing Rate</th>
+          </tr>
+        </thead>
+        <!-- <tbody>
+				<tr>
+					<th scope="row">INR</th>
+					<td contenteditable="true">1.30</td>
+					<td contenteditable="true">1.50</td>
+				</tr>
+				<tr>
+					<th scope="row">USD</th>
+					<td contenteditable="true">1.30</td>
+					<td contenteditable="true">1.50</td>
+				</tr>
+				<tr>
+					<th scope="row">CNY</th>
+					<td contenteditable="true">1.30</td>
+					<td contenteditable="true">1.50</td>
+				</tr>
+			</tbody> -->
+
+        <tbody>
+          <tr th:each="exchangeRate : ${exchangeRates}">
+            <th scope="row" th:text="${exchangeRate.currency}"></th>
+            <td
+              contenteditable="true"
+              th:text="${exchangeRate.averageRate}"
+            ></td>
+            <td
+              contenteditable="true"
+              th:text="${exchangeRate.closingRate}"
+            ></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-hover w-25">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center" colspan="3">JAN_2017</th>
+          </tr>
+          <tr>
+            <th scope="col">Currency</th>
+            <th scope="col">Avg. Rate</th>
+            <th scope="col">Closing Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">INR</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+          <tr>
+            <th scope="row">USD</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+          <tr>
+            <th scope="row">CNY</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-hover w-25">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center" colspan="3">FEB_2017</th>
+          </tr>
+          <tr>
+            <th scope="col">Currency</th>
+            <th scope="col">Avg. Rate</th>
+            <th scope="col">Closing Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">INR</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+          <tr>
+            <th scope="row">USD</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+          <tr>
+            <th scope="row">CNY</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-hover w-25">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center" colspan="3">MAR_2017</th>
+          </tr>
+          <tr>
+            <th scope="col">Currency</th>
+            <th scope="col">Avg. Rate</th>
+            <th scope="col">Closing Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">INR</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+          <tr>
+            <th scope="row">USD</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+          <tr>
+            <th scope="row">CNY</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-hover w-25">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center" colspan="3">APR_2017</th>
+          </tr>
+          <tr>
+            <th scope="col">Currency</th>
+            <th scope="col">Avg. Rate</th>
+            <th scope="col">Closing Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">INR</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+          <tr>
+            <th scope="row">USD</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+          <tr>
+            <th scope="row">CNY</th>
+            <td contenteditable="true">1.30</td>
+            <td contenteditable="true">1.50</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    ##o_m.html
+
+    <div class="gap-3  d-flex p-2" style="height: 100vh">
+		<!-- remove temporary left pannel -->
+		<div class="w-25 d-none border border-1 p-1">
+			<button type="button" class="btn btn-outline-primary float-end m-3">
+				Add/Remove Entities</button>
+			<!-- accordino -->
+			<div class="accordion" id="accordionPanelsStayOpenExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header">
+						<button class="accordion-button" type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+							aria-controls="panelsStayOpen-collapseOne">CG_0</button>
+					</h2>
+					<div id="panelsStayOpen-collapseOne"
+						class="accordion-collapse collapse show">
+						<div class="accordion-body">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#panelsStayOpen-collapseTwo"
+										aria-expanded="false"
+										aria-controls="panelsStayOpen-collapseTwo">CG_0_1</button>
+								</h2>
+								<div id="panelsStayOpen-collapseTwo"
+									class="accordion-collapse collapse">
+									<div class="accordion-body">
+										<strong>This is the FIRST item's accordion body.</strong>
+										<ul>
+											<li>list 1</li>
+											<li>list 2</li>
+											<li>list 3</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#panelsStayOpen-collapseThree"
+										aria-expanded="false"
+										aria-controls="panelsStayOpen-collapseThree">CG_0_2</button>
+								</h2>
+								<div id="panelsStayOpen-collapseThree"
+									class="accordion-collapse collapse">
+									<div class="accordion-body">
+										<strong>This is the SECOND item's accordion body.</strong>
+										<ul>
+											<li>list 1</li>
+											<li>list 2</li>
+											<li>list 3</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- main data displayer -->
+		<div class="w-100 p-2">
+			<table class="table table-bordered text-center w-100">
+				<!-- remove temporary -->
+				<button type="button"
+					class="d-none btn btn-outline-primary float-end m-2">Save
+					Changes</button>
+				<thead>
+					<tr>
+						<th scope="col" rowspan="2">Entity</th>
+						<th colspan="2">Consolidation Method</th>
+						<th colspan="2">Consolidation Rate</th>
+						<th colspan="2">Ownership Rate</th>
+					</tr>
+					<tr>
+						<th scope="col">Generated</th>
+						<th scope="col">Current</th>
+						<th scope="col">Generated</th>
+						<th scope="col">Current</th>
+						<th scope="col">Generated</th>
+						<th scope="col">Current</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Holding - Germany 1</th>
+						<td><select class="form-select"
+							aria-label="Disabled select example" disabled>
+								<option selected>None</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+						</select></td>
+						<td><select class="form-select" id="exampleSelect">
+								<option>101</option>
+								<option>100</option>
+								<option>20</option>
+						</select></td>
+						<td>0.00%</td>
+						<td>100.00%</td>
+						<td>0.00%</td>
+						<td>100.00%</td>
+					</tr>
+					<tr>
+						<th scope="row">Holding - Germany 1</th>
+						<td><select class="form-select"
+							aria-label="Disabled select example" disabled>
+								<option selected>None</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+						</select></td>
+						<td><select class="form-select" id="exampleSelect">
+								<option>101</option>
+								<option>100</option>
+								<option>20</option>
+						</select></td>
+						<td>0.00%</td>
+						<td>100.00%</td>
+						<td>0.00%</td>
+						<td>100.00%</td>
+					</tr>
+					<tr>
+						<th scope="row">Holding - Germany 1</th>
+						<td><select class="form-select"
+							aria-label="Disabled select example" disabled>
+								<option selected>None</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+						</select></td>
+						<td><select class="form-select" id="exampleSelect">
+								<option>101</option>
+								<option>100</option>
+								<option>20</option>
+						</select></td>
+						<td>0.00%</td>
+						<td>100.00%</td>
+						<td>0.00%</td>
+						<td>100.00%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>

@@ -29,11 +29,12 @@
 
 
     <!-- filters -->
-
     <div
       class="container  d-flex align-items-center justify-content-between gap-2 my-3"
     >
       <h6 class="d-flex">Category <span class="badge bg-secondary ms-1">Actual</span></h6>
+
+      <!-- for rates types -->
       <select
         class="form-select form-select-sm w-25 rateSelection"
         aria-label="Small select example"
@@ -54,27 +55,27 @@
           <div class="dropdown-menu" style="max-height: 100px; overflow-y: auto;">
             <form>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="aug_2023">
+                <input class="form-check-input" class="aug_2023" type="checkbox" id="aug_2023" >
                 <label class="form-check-label" for="aug_2023">Aug 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="sep_2023">
+                <input class="form-check-input" type="checkbox" id="sep_2023" class="sep_2023">
                 <label class="form-check-label" for="sep_2023">Sep 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="oct_2023">
+                <input class="form-check-input" type="checkbox" id="oct_2023" class="oct_2023">
                 <label class="form-check-label" for="oct_2023">Oct 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="nov_2023">
+                <input class="form-check-input" type="checkbox" id="nov_2023" class="nov_2023">
                 <label class="form-check-label" for="nov_2023">Nov 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="dec_2023">
+                <input class="form-check-input" type="checkbox" id="dec_2023" class="dec_2023">
                 <label class="form-check-label" for="dec_2023">Dec 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="jan_2024">
+                <input class="form-check-input" type="checkbox" id="jan_2024" class="jan_2024">
                 <label class="form-check-label" for="jan_2024">Jan 2024</label>
               </div>
               
@@ -136,8 +137,6 @@
       </div>
     </div>
 
-  
-
       <!-- table data for exchange_rates -->
 	<div class="container border border d-flex justify-content-center align-items-center flex-wrap gap-5 p-3">
 
@@ -146,27 +145,27 @@
 			<thead>
 			  <tr>
 				<th scope="col">Time <img src="../icons/right-arrows.png" alt=""></th>
-				<th scope="col" colspan="2">Aug 2023</th>
-				<th scope="col" colspan="2">Sep 2023</th>
-				<th scope="col" colspan="2">Oct 2023</th>
-				<th scope="col" colspan="2">Nov 2023</th>
-				<th scope="col" colspan="2">Dec 2023</th>
-				<th scope="col" colspan="2">Jan 2023</th>
+				<th scope="col" colspan="2" class="aug_2023">Aug 2023</th>
+				<th scope="col" colspan="2" class="sep_2023">Sep 2023</th>
+				<th scope="col" colspan="2" class="oct_2023">Oct 2023</th>
+				<th scope="col" colspan="2" class="nov_2023">Nov 2023</th>
+				<th scope="col" colspan="2" class="dec_2023">Dec 2023</th>
+				<th scope="col" colspan="2" class="jan_2024">Jan 2024</th>
 			  </tr>
 			  <tr>
 				<th scope="col">Rate Account <img src="../icons/right-arrows.png" alt=""></th>
-				<th id="avgRate" scope="col">Average Rate</th>
-				<th id="closeRate" scope="col">Closing Rate</th>
-				<th id="avgRate" scope="col">Average Rate</th>
-				<th id="closeRate" scope="col">Closing Rate</th>
-				<th id="avgRate" scope="col">Average Rate</th>
-				<th id="closeRate" scope="col">Closing Rate</th>
-				<th id="avgRate" scope="col">Average Rate</th>
-				<th id="closeRate" scope="col">Closing Rate</th>
-				<th id="avgRate" scope="col">Average Rate</th>
-				<th id="closeRate" scope="col">Closing Rate</th>
-				<th id="avgRate" scope="col">Average Rate</th>
-				<th id="closeRate" scope="col">Closing Rate</th>
+				<th id="avgRate" scope="col" class="aug_2023">Average Rate</th>
+				<th id="closeRate" scope="col" class="aug_2023">Closing Rate</th>
+				<th id="avgRate" scope="col" class="sep_2023">Average Rate</th>
+				<th id="closeRate" scope="col" class="sep_2023">Closing Rate</th>
+				<th id="avgRate" scope="col" class="oct_2023">Average Rate</th>
+				<th id="closeRate" scope="col" class="oct_2023">Closing Rate</th>
+				<th id="avgRate" scope="col" class="nov_2023">Average Rate</th>
+				<th id="closeRate" scope="col" class="nov_2023">Closing Rate</th>
+				<th id="avgRate" scope="col" class="dec_2023">Average Rate</th>
+				<th id="closeRate" scope="col" class="dec_2023">Closing Rate</th>
+				<th id="avgRate" scope="col" class="jan_2024">Average Rate</th>
+				<th id="closeRate" scope="col" class="jan_2024">Closing Rate</th>
 			  </tr>
 			  <tr>
 				<th scope="col" class="d-flex">Input Currency <img src="../icons/down-arrow.png" alt=""></th>
@@ -178,48 +177,48 @@
 			<tbody class="table-group-divider">
 			  <tr>
 				<td>Euro</td>
-				<td id="avgRate" contenteditable="true">1.30</td>
-				<td id="closeRate" contenteditable="true">1.25</td>
-				<td id="avgRate" contenteditable="true">1.40</td>
-				<td id="closeRate" contenteditable="true">1.25</td> 
-				<td id="avgRate" contenteditable="true">1.30</td>
-				<td id="closeRate" contenteditable="true">1.35</td>
-				<td id="avgRate" contenteditable="true">1.40</td>
-				<td id="closeRate" contenteditable="true">1.25</td> 
-				<td id="avgRate" contenteditable="true">1.30</td>
-				<td id="closeRate" contenteditable="true">1.35</td>
-				<td id="avgRate" contenteditable="true">1.40</td>
-				<td id="closeRate" contenteditable="true">1.35</td>
+				<td id="avgRate" class="aug_2023" contenteditable="true">1.30</td>
+				<td id="closeRate" class="aug_2023" contenteditable="true">1.25</td>
+				<td id="avgRate" class="sep_2023" contenteditable="true">1.40</td>
+				<td id="closeRate" class="sep_2023" contenteditable="true">1.25</td> 
+				<td id="avgRate" class="oct_2023" contenteditable="true">1.30</td>
+				<td id="closeRate" class="oct_2023" contenteditable="true">1.35</td>
+				<td id="avgRate" class="nov_2023" contenteditable="true">1.40</td>
+				<td id="closeRate" class="nov_2023" contenteditable="true">1.25</td> 
+				<td id="avgRate" class="dec_2023" contenteditable="true">1.30</td>
+				<td id="closeRate" class="dec_2023" contenteditable="true">1.35</td>
+				<td id="avgRate" class="jan_2024" contenteditable="true">1.40</td>
+				<td id="closeRate" class="jan_2024" contenteditable="true">1.35</td>
 			  </tr>
 			  <tr>
 				<td>Pound</td>
-				<td id="avgRate" contenteditable="true">1.40</td>
-				<td id="closeRate" contenteditable="true">1.25</td> 
-				<td id="avgRate" contenteditable="true">1.40</td>
-				<td id="closeRate" contenteditable="true">1.25</td> 
-				<td id="avgRate" contenteditable="true">1.30</td>
-				<td id="closeRate" contenteditable="true">1.35</td>
-				<td id="avgRate" contenteditable="true">1.30</td>
-				<td id="closeRate" contenteditable="true">1.40</td>
-				<td id="avgRate" contenteditable="true">1.25</td> 
-				<td id="closeRate" contenteditable="true">1.30</td>
-				<td id="avgRate" contenteditable="true">1.35</td>
-				<td id="closeRate" contenteditable="true">1.35</td>
+				<td id="avgRate" class="aug_2023" contenteditable="true">1.40</td>
+				<td id="closeRate" class="aug_2023" contenteditable="true">1.25</td> 
+				<td id="avgRate" class="sep_2023" contenteditable="true">1.40</td>
+				<td id="closeRate" class="sep_2023" contenteditable="true">1.25</td> 
+				<td id="avgRate" class="oct_2023" contenteditable="true">1.30</td>
+				<td id="closeRate" class="oct_2023" contenteditable="true">1.35</td>
+				<td id="avgRate" class="nov_2023" contenteditable="true">1.30</td>
+				<td id="closeRate" class="nov_2023" contenteditable="true">1.40</td>
+				<td id="avgRate" class="dec_2023" contenteditable="true">1.25</td> 
+				<td id="closeRate" class="dec_2023" contenteditable="true">1.30</td>
+				<td id="avgRate" class="jan_2024" contenteditable="true">1.35</td>
+				<td id="closeRate" class="jan_2024" contenteditable="true">1.35</td>
 			  </tr>
 			  <tr>
 				<td>U.S Dollar</td>
-				<td id="avgRate" contenteditable="true">1.30</td>
-				<td id="closeRate" contenteditable="true">1.20</td>
-				<td id="avgRate" contenteditable="true">1.40</td>
-				<td id="closeRate" contenteditable="true">1.40</td>
-				<td id="avgRate" contenteditable="true">1.25</td> 
-				<td id="closeRate" contenteditable="true">1.30</td>
-				<td id="avgRate" contenteditable="true">1.35</td>
-				<td id="closeRate" contenteditable="true">1.40</td>
-				<td id="avgRate" contenteditable="true">1.25</td> 
-				<td id="closeRate" contenteditable="true">1.30</td>
-				<td id="avgRate" contenteditable="true">1.35</td>
-				<td id="closeRate" contenteditable="true">1.05</td>
+				<td id="avgRate" class="aug_2023" contenteditable="true">1.30</td>
+				<td id="closeRate" class="aug_2023" contenteditable="true">1.25</td>
+				<td id="avgRate" class="sep_2023" contenteditable="true">1.40</td>
+				<td id="closeRate" class="sep_2023" contenteditable="true">1.25</td> 
+				<td id="avgRate" class="oct_2023" contenteditable="true">1.30</td>
+				<td id="closeRate" class="oct_2023" contenteditable="true">1.35</td>
+				<td id="avgRate" class="nov_2023" contenteditable="true">1.40</td>
+				<td id="closeRate" class="nov_2023" contenteditable="true">1.25</td> 
+				<td id="avgRate" class="dec_2023" contenteditable="true">1.30</td>
+				<td id="closeRate" class="dec_2023" contenteditable="true">1.35</td>
+				<td id="avgRate" class="jan_2024" contenteditable="true">1.40</td>
+				<td id="closeRate" class="jan_2024" contenteditable="true">1.35</td>
 			  </tr>
 			</tbody>
 		  </table>
