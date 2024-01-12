@@ -11,28 +11,34 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+      .table {
+        /* margin-left: 50px; */
+        /* overflow: scroll; */
+        /* display: flex; */
+        /* justify-content: flex-start; */
+        /* align-items: flex-start; */
+        /* flex-direction: column; */
+      }
+    </style>
   </head>
   <body>
     <a href="../ownership/index2.html" target="_self" rel="noopener noreferrer"
-      ><img alt="" src="../icons/right-arrows.png"
+      ><img alt="" src="../icons/two-arrows.png"
     /></a>
 
-
-  
-    
     <div class="container text-dark border text-center p-3 h1">
       Exchange_Rates
     </div>
 
-
     <!-- filters -->
     <div
-      class="container  d-flex align-items-center justify-content-between gap-2 my-3"
+      class="container d-flex align-items-center justify-content-between gap-2 my-3"
     >
-      <h6 class="d-flex">Category <span class="badge bg-secondary ms-1">Actual</span></h6>
+      <h6 class="d-flex">
+        Category <span class="badge bg-secondary ms-1">Actual</span>
+      </h6>
 
       <!-- for rates types -->
       <select
@@ -49,49 +55,113 @@
       <!-- for date -->
       <div class="container">
         <div class="btn-group">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             Select Dates
           </button>
-          <div class="dropdown-menu" style="max-height: 100px; overflow-y: auto;">
+          <div
+            class="dropdown-menu"
+            style="max-height: 100px; overflow-y: auto"
+          >
             <form>
               <div class="form-check">
-                <input class="form-check-input" class="aug_2023" type="checkbox" id="aug_2023" >
+                <b>Hide Date</b>
+                <hr style="margin: 0;">
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  class="aug_2023"
+                  type="checkbox"
+                  id="aug_2023"
+                />
                 <label class="form-check-label" for="aug_2023">Aug 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="sep_2023" class="sep_2023">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="sep_2023"
+                  class="sep_2023"
+                />
                 <label class="form-check-label" for="sep_2023">Sep 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="oct_2023" class="oct_2023">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="oct_2023"
+                  class="oct_2023"
+                />
                 <label class="form-check-label" for="oct_2023">Oct 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="nov_2023" class="nov_2023">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="nov_2023"
+                  class="nov_2023"
+                />
                 <label class="form-check-label" for="nov_2023">Nov 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="dec_2023" class="dec_2023">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="dec_2023"
+                  class="dec_2023"
+                />
                 <label class="form-check-label" for="dec_2023">Dec 2023</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="jan_2024" class="jan_2024">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="jan_2024"
+                  class="jan_2024"
+                />
                 <label class="form-check-label" for="jan_2024">Jan 2024</label>
               </div>
-              
             </form>
           </div>
         </div>
       </div>
 
-
-     
       <!-- button for save, refresh and edit -->
-      <div class="btn-group"  role="group" aria-label="Default button group">
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggl="tooltip" data-bs-placement="bottom" data-bs-title="Save">  <img alt="" src="../icons/save.png" /></button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggl="tooltip" data-bs-placement="bottom" data-bs-title="Refresh">  <img alt="" src="../icons/refresh.png" /></button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggl="tooltip" data-bs-placement="bottom" data-bs-title="Edit" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <img alt="" src="../icons/edit.png" />
+      <div class="btn-group" role="group" aria-label="Default button group">
+        <button
+          type="button"
+          class="btn btn-outline-secondary save-button"
+          data-bs-toggl="tooltip"
+          data-bs-placement="bottom"
+          data-bs-title="Save"
+        >
+          <img alt="" src="../icons/save.png" />
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          data-bs-toggl="tooltip"
+          data-bs-placement="bottom"
+          data-bs-title="Refresh"
+        >
+          <img alt="" src="../icons/refresh.png" />
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-secondary edit-button"
+          data-bs-toggl="tooltip"
+          data-bs-placement="bottom"
+          data-bs-title="Edit"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <img alt="" src="../icons/edit.png" />
         </button>
       </div>
 
@@ -137,96 +207,402 @@
       </div>
     </div>
 
-      <!-- table data for exchange_rates -->
-	<div class="container border border d-flex justify-content-center align-items-center flex-wrap gap-5 p-3">
-
-
-		<table class="table text-center table-bordered">
-			<thead>
-			  <tr>
-				<th scope="col">Time <img src="../icons/right-arrows.png" alt=""></th>
-				<th scope="col" colspan="2" class="aug_2023">Aug 2023</th>
-				<th scope="col" colspan="2" class="sep_2023">Sep 2023</th>
-				<th scope="col" colspan="2" class="oct_2023">Oct 2023</th>
-				<th scope="col" colspan="2" class="nov_2023">Nov 2023</th>
-				<th scope="col" colspan="2" class="dec_2023">Dec 2023</th>
-				<th scope="col" colspan="2" class="jan_2024">Jan 2024</th>
-			  </tr>
-			  <tr>
-				<th scope="col">Rate Account <img src="../icons/right-arrows.png" alt=""></th>
-				<th id="avgRate" scope="col" class="aug_2023">Average Rate</th>
-				<th id="closeRate" scope="col" class="aug_2023">Closing Rate</th>
-				<th id="avgRate" scope="col" class="sep_2023">Average Rate</th>
-				<th id="closeRate" scope="col" class="sep_2023">Closing Rate</th>
-				<th id="avgRate" scope="col" class="oct_2023">Average Rate</th>
-				<th id="closeRate" scope="col" class="oct_2023">Closing Rate</th>
-				<th id="avgRate" scope="col" class="nov_2023">Average Rate</th>
-				<th id="closeRate" scope="col" class="nov_2023">Closing Rate</th>
-				<th id="avgRate" scope="col" class="dec_2023">Average Rate</th>
-				<th id="closeRate" scope="col" class="dec_2023">Closing Rate</th>
-				<th id="avgRate" scope="col" class="jan_2024">Average Rate</th>
-				<th id="closeRate" scope="col" class="jan_2024">Closing Rate</th>
-			  </tr>
-			  <tr>
-				<th scope="col" class="d-flex">Input Currency <img src="../icons/down-arrow.png" alt=""></th>
-				<th colspan="2"></th>
-				<th colspan="2"></th>
-				
-			  </tr>
-			</thead>
-			<tbody class="table-group-divider">
-			  <tr>
-				<td>Euro</td>
-				<td id="avgRate" class="aug_2023" contenteditable="true">1.30</td>
-				<td id="closeRate" class="aug_2023" contenteditable="true">1.25</td>
-				<td id="avgRate" class="sep_2023" contenteditable="true">1.40</td>
-				<td id="closeRate" class="sep_2023" contenteditable="true">1.25</td> 
-				<td id="avgRate" class="oct_2023" contenteditable="true">1.30</td>
-				<td id="closeRate" class="oct_2023" contenteditable="true">1.35</td>
-				<td id="avgRate" class="nov_2023" contenteditable="true">1.40</td>
-				<td id="closeRate" class="nov_2023" contenteditable="true">1.25</td> 
-				<td id="avgRate" class="dec_2023" contenteditable="true">1.30</td>
-				<td id="closeRate" class="dec_2023" contenteditable="true">1.35</td>
-				<td id="avgRate" class="jan_2024" contenteditable="true">1.40</td>
-				<td id="closeRate" class="jan_2024" contenteditable="true">1.35</td>
-			  </tr>
-			  <tr>
-				<td>Pound</td>
-				<td id="avgRate" class="aug_2023" contenteditable="true">1.40</td>
-				<td id="closeRate" class="aug_2023" contenteditable="true">1.25</td> 
-				<td id="avgRate" class="sep_2023" contenteditable="true">1.40</td>
-				<td id="closeRate" class="sep_2023" contenteditable="true">1.25</td> 
-				<td id="avgRate" class="oct_2023" contenteditable="true">1.30</td>
-				<td id="closeRate" class="oct_2023" contenteditable="true">1.35</td>
-				<td id="avgRate" class="nov_2023" contenteditable="true">1.30</td>
-				<td id="closeRate" class="nov_2023" contenteditable="true">1.40</td>
-				<td id="avgRate" class="dec_2023" contenteditable="true">1.25</td> 
-				<td id="closeRate" class="dec_2023" contenteditable="true">1.30</td>
-				<td id="avgRate" class="jan_2024" contenteditable="true">1.35</td>
-				<td id="closeRate" class="jan_2024" contenteditable="true">1.35</td>
-			  </tr>
-			  <tr>
-				<td>U.S Dollar</td>
-				<td id="avgRate" class="aug_2023" contenteditable="true">1.30</td>
-				<td id="closeRate" class="aug_2023" contenteditable="true">1.25</td>
-				<td id="avgRate" class="sep_2023" contenteditable="true">1.40</td>
-				<td id="closeRate" class="sep_2023" contenteditable="true">1.25</td> 
-				<td id="avgRate" class="oct_2023" contenteditable="true">1.30</td>
-				<td id="closeRate" class="oct_2023" contenteditable="true">1.35</td>
-				<td id="avgRate" class="nov_2023" contenteditable="true">1.40</td>
-				<td id="closeRate" class="nov_2023" contenteditable="true">1.25</td> 
-				<td id="avgRate" class="dec_2023" contenteditable="true">1.30</td>
-				<td id="closeRate" class="dec_2023" contenteditable="true">1.35</td>
-				<td id="avgRate" class="jan_2024" contenteditable="true">1.40</td>
-				<td id="closeRate" class="jan_2024" contenteditable="true">1.35</td>
-			  </tr>
-			</tbody>
-		  </table>
-
-	</div>
-
-
-
+    <!-- table data for exchange_rates -->
+    <div class="container border p-0 overflow-scroll" style="height: 80vh">
+      <table class="table text-center table-bordered border ">
+        <thead>
+          <tr>
+            <th scope="col">
+              Time <img src="../icons/right-arrows.png" alt="" />
+            </th>
+            <th scope="col" colspan="2" class="aug_2023">Aug 2023</th>
+            <th scope="col" colspan="2" class="sep_2023">Sep 2023</th>
+            <th scope="col" colspan="2" class="oct_2023">Oct 2023</th>
+            <th scope="col" colspan="2" class="nov_2023">Nov 2023</th>
+            <th scope="col" colspan="2" class="dec_2023">Dec 2023</th>
+            <th scope="col" colspan="2" class="jan_2024">Jan 2024</th>
+            <th scope="col" colspan="2" class="aug_2023">Aug 2023</th>
+            <th scope="col" colspan="2" class="sep_2023">Sep 2023</th>
+            <th scope="col" colspan="2" class="oct_2023">Oct 2023</th>
+            <th scope="col" colspan="2" class="nov_2023">Nov 2023</th>
+            <th scope="col" colspan="2" class="dec_2023">Dec 2023</th>
+            <th scope="col" colspan="2" class="jan_2024">Jan 2024</th>
+          </tr>
+          <tr>
+            <th scope="col">
+              Rate Account <img src="../icons/right-arrows.png" alt="" />
+            </th>
+            <th id="avgRate" scope="col" class="aug_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="aug_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="sep_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="sep_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="oct_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="oct_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="nov_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="nov_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="dec_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="dec_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="jan_2024">Average Rate</th>
+            <th id="closeRate" scope="col" class="jan_2024">Closing Rate</th>
+            <th id="avgRate" scope="col" class="aug_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="aug_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="sep_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="sep_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="oct_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="oct_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="nov_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="nov_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="dec_2023">Average Rate</th>
+            <th id="closeRate" scope="col" class="dec_2023">Closing Rate</th>
+            <th id="avgRate" scope="col" class="jan_2024">Average Rate</th>
+            <th id="closeRate" scope="col" class="jan_2024">Closing Rate</th>
+          </tr>
+          <tr style="border: 2px solid">
+            <th scope="col" class="d-flex">
+              Input Currency <img src="../icons/down-arrow.png" alt="" />
+            </th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+            <th colspan="2"></th>
+          </tr>
+        </thead> 
+        <tbody class="table-group-divider">
+          <tr>
+            <th co>Euro</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>Pound</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.25</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.25</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>U.S Dollar</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>Euro</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>Pound</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.25</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.25</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>U.S Dollar</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>Euro</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>Pound</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.25</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.25</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>U.S Dollar</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>Euro</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>Pound</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.25</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.25</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+          <tr>
+            <th>U.S Dollar</th>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+            <td id="avgRate" class="aug_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="aug_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="sep_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="sep_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="oct_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="oct_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="nov_2023" contenteditable="false">1.40</td>
+            <td id="closeRate" class="nov_2023" contenteditable="false">1.25</td>
+            <td id="avgRate" class="dec_2023" contenteditable="false">1.30</td>
+            <td id="closeRate" class="dec_2023" contenteditable="false">1.35</td>
+            <td id="avgRate" class="jan_2024" contenteditable="false">1.40</td>
+            <td id="closeRate" class="jan_2024" contenteditable="false">1.35</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

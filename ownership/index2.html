@@ -11,11 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="style1.css" />
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
     <a href="../ex_rates/index1.html" target="_self" rel="noopener noreferrer"
-      ><img alt="" src="../icons/right-arrows.png"
+      ><img alt="" src="../icons/two-arrows.png"
     /></a>
     <h1 class="container text-dark border text-center p-3 h1">
       Ownership_Management
@@ -107,7 +107,7 @@
         </div>
       </div>
 
-      <!-- filter -->
+      <!-- filter code start here -->
       <div
         class="container d-flex flex-row gap-2 justify-content-between align-items-center"
       >
@@ -172,51 +172,7 @@
 
         <!-- select date -->
 
-		<div class="container">
-			<div class="btn-group">
-			  <button
-				type="button"
-				class="btn btn-secondary dropdown-toggle"
-				data-bs-toggle="dropdown"
-				aria-haspopup="true"
-				aria-expanded="false"
-			  >
-				Select Dates
-			  </button>
-			  <div class="dropdown-menu" style="max-height: 100px; overflow-y: auto;">
-				<form>
-				  <div class="form-check">
-					<input class="form-check-input" type="checkbox" id="aug_2023" />
-					<label class="form-check-label" for="aug_2023">Aug 2023</label>
-				  </div>
-				  <div class="form-check">
-					<input class="form-check-input" type="checkbox" id="sep_2023" />
-					<label class="form-check-label" for="sep_2023">Sep 2023</label>
-				  </div>
-				  <div class="form-check">
-					<input class="form-check-input" type="checkbox" id="oct_2023" />
-					<label class="form-check-label" for="oct_2023">Oct 2023</label>
-				  </div>
-				  <div class="form-check">
-					<input class="form-check-input" type="checkbox" id="nov_2023" />
-					<label class="form-check-label" for="nov_2023">Nov 2023</label>
-				  </div>
-				  <div class="form-check">
-					<input class="form-check-input" type="checkbox" id="dec_2023" />
-					<label class="form-check-label" for="dec_2023">Dec 2023</label>
-				  </div>
-				  <div class="form-check">
-					<input class="form-check-input" type="checkbox" id="jan_2024" />
-					<label class="form-check-label" for="jan_2024">Jan 2024</label>
-				  </div>
-				  
-				</form>
-			  </div>
-			</div>
-		  </div>
-		  
-
-        <!-- <div class="container">
+        <div class="container">
           <div class="btn-group">
             <button
               type="button"
@@ -227,7 +183,10 @@
             >
               Select Dates
             </button>
-            <div class="dropdown-menu">
+            <div
+              class="dropdown-menu"
+              style="max-height: 100px; overflow-y: auto"
+            >
               <form>
                 <div class="form-check">
                   <input
@@ -292,7 +251,7 @@
               </form>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <!-- select entity -->
         <div class="container">
@@ -329,56 +288,83 @@
         </div>
 
         <!-- for save, edit and refresh -->
-        <div class="btn-group"  role="group" aria-label="Default button group">
-			<button type="button" class="btn btn-outline-secondary" data-bs-toggl="tooltip" data-bs-placement="bottom" data-bs-title="Save">  <img alt="" src="../icons/save.png" /></button>
-			<button type="button" class="btn btn-outline-secondary" data-bs-toggl="tooltip" data-bs-placement="bottom" data-bs-title="Refresh">  <img alt="" src="../icons/refresh.png" /></button>
-			<button type="button" class="btn btn-outline-secondary" data-bs-toggl="tooltip" data-bs-placement="bottom" data-bs-title="Add Entity" data-bs-toggle="modal" data-bs-target="#exampleModal">
-				<img alt="" src="../icons/add.png" />
-			</button>
-		</div>
-		<div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Are You Sure To Make Changes..
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-dismiss="modal"
-              >
-                Ok
-              </button>
+        <div class="btn-group" role="group" aria-label="Default button group">
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            data-bs-toggl="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="Save"
+          >
+            <img alt="" src="../icons/save.png" />
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            data-bs-toggl="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="Refresh"
+          >
+            <img alt="" src="../icons/refresh.png" />
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            data-bs-toggl="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="Add Entity"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <img alt="" src="../icons/add.png" />
+          </button>
+        </div>
+
+        <!-- modal creation box -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Are You Sure To Make Changes..
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Ok
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
+      <!-- filter code end here -->
 
       <!-- main data displayer -->
-      <div class=" container w-100 p-2">
+      <div class="container w-100 p-2">
         <table class="table table-bordered text-center w-100">
           <thead>
             <tr>
@@ -413,10 +399,10 @@
               </td> -->
               <td colspan="2">
                 <select class="form-select" id="exampleSelect">
-				  <option value="" selected>Select Ownership Type</option>
+                  <option value="" selected>Select Ownership Type</option>
                   <option>101(Holding)</option>
                   <option>100(Full)</option>
-				  <option>50 &nbsp;(Proportional)</option>
+                  <option>50 &nbsp;(Proportional)</option>
                   <option>20 &nbsp;(Equity)</option>
                 </select>
               </td>
@@ -441,10 +427,10 @@
               </td> -->
               <td colspan="2">
                 <select class="form-select" id="exampleSelect">
-				  <option value="" selected>Select Ownership Type</option>
+                  <option value="" selected>Select Ownership Type</option>
                   <option>101(Holding)</option>
                   <option>100(Full)</option>
-				  <option>50 &nbsp;(Proportional)</option>
+                  <option>50 &nbsp;(Proportional)</option>
                   <option>20 &nbsp;(Equity)</option>
                 </select>
               </td>
@@ -469,10 +455,10 @@
               </td> -->
               <td colspan="2">
                 <select class="form-select" id="exampleSelect">
-				  <option value="" selected>Select Ownership Type</option>
+                  <option value="" selected>Select Ownership Type</option>
                   <option>101(Holding)</option>
                   <option>100(Full)</option>
-				  <option>50 &nbsp;(Proportional)</option>
+                  <option>50 &nbsp;(Proportional)</option>
                   <option>20 &nbsp;(Equity)</option>
                 </select>
               </td>
@@ -484,6 +470,8 @@
           </tbody>
         </table>
       </div>
+
+      
     </div>
 
     <script
